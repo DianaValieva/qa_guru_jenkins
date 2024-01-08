@@ -4,7 +4,7 @@ import os
 import allure
 
 
-def test_submit(open_browser):
+def test_submit():
     with allure.step("Открываем demoqa"):
         browser.open('https://demoqa.com/automation-practice-form')
 
