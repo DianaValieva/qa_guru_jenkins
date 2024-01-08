@@ -24,7 +24,7 @@ def test_submit():
         browser.element('#react-select-3-input').type('NCR').press_enter()
         browser.element('#react-select-4-input').type('Delhi').press_enter()
         browser.element('#uploadPicture').send_keys(os.path.abspath(
-            'dog.jpg'))
+            '../dog.jpg'))
 
     with allure.step("Подтверждаем"):
         browser.element('#submit').click()
