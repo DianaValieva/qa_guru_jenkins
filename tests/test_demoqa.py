@@ -30,7 +30,7 @@ def test_submit():
         browser.element('#submit').press_enter()
 
     with allure.step("Проверяем данные"):
-        browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
+        browser.element('.modal-header').should(have.text('Thanks for submitting the form'))
         browser.all('.table').all('td')[1].should(have.exact_text('Diana Valieva'))
         browser.all('.table').all('td')[3].should(have.exact_text('di7051@gmail.com'))
         browser.all('.table').all('td')[5].should(have.exact_text('Female'))
