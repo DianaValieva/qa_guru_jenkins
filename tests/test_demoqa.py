@@ -27,7 +27,7 @@ def test_submit():
             'tests/files/dog.jpg'))
 
     with allure.step("Подтверждаем"):
-        browser.element('#submit').click()
+        browser.element('#submit').press_enter()
 
     with allure.step("Проверяем данные"):
         browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
