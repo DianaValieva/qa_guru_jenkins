@@ -2,6 +2,7 @@ from selene import browser
 from selene import be, have, by
 import os
 import allure
+from utils import resources
 
 
 def test_submit():
@@ -23,8 +24,7 @@ def test_submit():
         browser.element('#currentAddress').should(be.blank).type("ufa")
         browser.element('#react-select-3-input').type('NCR').press_enter()
         browser.element('#react-select-4-input').type('Delhi').press_enter()
-        browser.element('#uploadPicture').send_keys(os.path.abspath(
-            'resources/dog.jpg'))
+        browser.element('#uploadPicture').send_keys(resources.path('dog.jpg'))
 
     with allure.step("Подтверждаем"):
         browser.element('#submit').press_enter()
